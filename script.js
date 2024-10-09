@@ -1,62 +1,20 @@
-const btnAge = document.querySelector("#sendAge");
-
-btnAge.addEventListener("click", function(event) {
-    
-    event.preventDefault();
-    
-    const age = document.querySelector("#age");
-
-    const value = age.value
-
-    if (value >= 18 ) {
-        console.log("Você é maior de idade.")
-        document.getElementById("resultado").innerHTML = "Você é maior de idade."
+function calculadora(a, b, operacao) {
+    if(operacao == 'soma'){
+        return console.log(a + b)
+    } else if(operacao == 'subtracao'){
+        return console.log(a - b)
+    } else if(operacao == 'multiplicacao'){
+        return console.log(a * b)
+    } else if(operacao == 'divisao'){
+        return console.log(a / b)
     } else {
-        console.log("Você é menor de idade.")
-        document.getElementById("resultado").innerHTML = "Você é menor de idade."
-    } 
-});
-
-
-const btnParImpar = document.querySelector("#sendParImpar");
-
-btnParImpar.addEventListener("click", function(event){
-    
-    event.preventDefault();
-
-    const num = document.querySelector("#ParImpar");
-
-    const value2 = num.value
-
-    if (value2%2 == 0){
-        console.log("Par")
-        document.getElementById("resultado2").innerHTML = " É Par."
-    } else {
-        console.log("Impar")
-        document.getElementById("resultado2").innerHTML = " É Impar."
+        return console.log('ERRO. Operação Inválida')
     }
-});
+}
 
-const btnZero = document.querySelector("#sendZero");
-
-btnZero.addEventListener("click", function(event){
-
-    event.preventDefault();
-
-    const zero = document.querySelector("#Zero")
-
-    const value3 = zero.value
-
-    if (value3 == 0 ){
-        console.log("Zero.")
-        document.getElementById("resultado3").innerHTML = "Zero."
-    } else if (value3 > 1 ){
-        console.log("Número Positivo.")
-        document.getElementById("resultado3").innerHTML = "Número Positivo."
-    } else {
-        console.log("Número Negativo")
-        document.getElementById("resultado3").innerHTML = "Número Negativo"
-    }
-
-})
+calculadora(5, 4, 'soma');
+calculadora(3, 2, 'subtracao');
+calculadora(2, 3, 'multiplicacao');
+calculadora(15, 3, 'divisao');
+calculadora(20, 2, 'banana');
 
